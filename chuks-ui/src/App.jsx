@@ -1,19 +1,30 @@
 import './App.css'
-import Navbar from './components/Navbar'
-import Footer from './components/Footer'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+
+import AuthLayout from './layouts/AuthLayout'
+import MainLayout from './layouts/MainLayout'
+
+import Welcome from './pages/Welcome'
+import SignIn from './pages/SignIn'
+import SignUp from './pages/SignUp'
 
 function App() {
   return (
-    <div className="min-h-screen flex flex-col">
-      <Navbar />
+    <BrowserRouter>
+      <Routes>
+        {/* Auth pages — no Navbar, split-screen layout */}
+        <Route element={<AuthLayout />}>
+          <Route path="/" element={<Welcome />} />
+          <Route path="/signin" element={<SignIn />} />
+          <Route path="/signup" element={<SignUp />} />
+        </Route>
 
-      <main className="flex-1">
-        {/* Page content goes here */}
-        <h1 className="text-3xl font-bold text-center mt-10">Welcome to Chuks Eats</h1>
-      </main>
-
-      <Footer />
-    </div>
+        {/* Main app pages — with Navbar + Footer */}
+        <Route element={<MainLayout />}>
+          {/* Add your authenticated / main pages here */}
+        </Route>
+      </Routes>
+    </BrowserRouter>
   )
 }
 
