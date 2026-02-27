@@ -1,21 +1,12 @@
-import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const SignIn = () => {
-  const [form, setForm] = useState({
-    email: '',
-    password: '',
-  });
-
-  const handleChange = (e) => {
-    setForm({ ...form, [e.target.name]: e.target.value });
-  };
+  const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Mock — replace with real API call later
-    console.log('Sign-in data:', form);
-    alert('Signed in (mock). Connect your backend here.');
+    // Mock — just navigate to home, replace with real API call later
+    navigate('/home');
   };
 
   return (
@@ -32,10 +23,7 @@ const SignIn = () => {
             id="email"
             name="email"
             type="email"
-            value={form.email}
-            onChange={handleChange}
             placeholder="you@example.com"
-            required
             className="w-full border border-gray-300 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent"
           />
         </div>
@@ -46,10 +34,7 @@ const SignIn = () => {
             id="password"
             name="password"
             type="password"
-            value={form.password}
-            onChange={handleChange}
             placeholder="••••••••"
-            required
             className="w-full border border-gray-300 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent"
           />
         </div>

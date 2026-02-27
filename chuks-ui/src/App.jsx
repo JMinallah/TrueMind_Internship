@@ -7,6 +7,8 @@ import MainLayout from './layouts/MainLayout'
 import Welcome from './pages/Welcome'
 import SignIn from './pages/SignIn'
 import SignUp from './pages/SignUp'
+import Home from './pages/Home'
+import FoodDetail from './pages/FoodDetail'
 
 function App() {
   return (
@@ -21,7 +23,8 @@ function App() {
 
         {/* Main app pages — with Navbar + Footer */}
         <Route element={<MainLayout />}>
-          {/* Add your authenticated / main pages here */}
+          <Route path="/home" element={<Home />} />
+          <Route path="/food/:id" element={<FoodDetail />} />
         </Route>
       </Routes>
     </BrowserRouter>
