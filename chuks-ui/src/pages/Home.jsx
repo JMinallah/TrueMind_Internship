@@ -6,18 +6,24 @@ import SearchBar from '../components/SearchBar';
 import { popularCategories, chefsSpecials } from '../data/foodItems';
 
 const CategoryCard = ({ item }) => (
-  <Link to={`/food/${item.id}`} className="group rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition bg-white block">
+  <div className="group rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition bg-white block">
     <div className="h-48 bg-gray-200 overflow-hidden">
       <img src={item.image} alt={item.name} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
     </div>
     <div className="p-3 text-center">
       <h3 className="font-semibold text-gray-900 group-hover:text-orange-600 transition">{item.name}</h3>
+      <button
+        onClick={() => window.location.href = '/cart'}
+        className="mt-3 bg-orange-600 text-white text-sm px-4 py-2 rounded-lg font-medium hover:bg-orange-700 transition"
+      >
+        Add to Cart
+      </button>
     </div>
-  </Link>
+  </div>
 );
 
 const SpecialCard = ({ item }) => (
-  <Link to={`/food/${item.id}`} className="group rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition bg-white block">
+  <div className="group rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition bg-white block">
     <div className="h-48 bg-gray-200 overflow-hidden">
       <img src={item.image} alt={item.name} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
     </div>
@@ -27,14 +33,14 @@ const SpecialCard = ({ item }) => (
       <div className="mt-3 flex items-center justify-between">
         <span className="text-orange-600 font-bold text-sm">{item.price}</span>
         <button
-          onClick={(e) => { e.preventDefault(); /* add to cart logic */ }}
+          onClick={() => window.location.href = '/cart'}
           className="bg-orange-600 text-white text-sm px-4 py-2 rounded-lg font-medium hover:bg-orange-700 transition"
         >
           Add to Cart
         </button>
       </div>
     </div>
-  </Link>
+  </div>
 );
 
 const Home = () => {

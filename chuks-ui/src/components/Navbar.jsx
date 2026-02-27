@@ -19,8 +19,8 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="hidden md:flex items-center justify-between h-16">
           {/* Logo / Brand */}
-          <a href="/" className="text-2xl font-bold text-orange-600">
-            Chuks Eats
+          <a href="/" className="text-2xl font-bold italic text-orange-600">
+            Chuks Kitchen
           </a>
 
           {/* Nav Links */}
@@ -47,8 +47,8 @@ const Navbar = () => {
 
         {/* Mobile header */}
         <div className="flex md:hidden items-center justify-between h-16">
-          <a href="/" className="text-2xl font-bold text-orange-600">
-            Chuks Eats
+          <a href="/" className="text-2xl font-bold italic text-orange-600">
+            Chuks Kitchen
           </a>
           <button
             className="text-gray-700 focus:outline-none"
