@@ -7,9 +7,9 @@ import { popularCategories, chefsSpecials } from '../data/foodItems';
 
 const CategoryCard = ({ item }) => (
   <div className="group rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition bg-white block">
-    <div className="h-48 bg-gray-200 overflow-hidden">
-      <img src={item.image} alt={item.name} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
-    </div>
+    <Link to={`/food/${item.id}`} className="h-48 bg-gray-200 overflow-hidden block">
+      <img src={item.image} alt={item.name} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 cursor-pointer" />
+    </Link>
     <div className="p-3 text-center">
       <h3 className="font-semibold text-gray-900 group-hover:text-orange-600 transition">{item.name}</h3>
       <button
@@ -24,9 +24,9 @@ const CategoryCard = ({ item }) => (
 
 const SpecialCard = ({ item }) => (
   <div className="group rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition bg-white block">
-    <div className="h-48 bg-gray-200 overflow-hidden">
-      <img src={item.image} alt={item.name} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
-    </div>
+    <Link to={`/food/${item.id}`} className="h-48 bg-gray-200 overflow-hidden block">
+      <img src={item.image} alt={item.name} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 cursor-pointer" />
+    </Link>
     <div className="p-4">
       <h3 className="font-semibold text-gray-900 group-hover:text-orange-600 transition">{item.name}</h3>
       <p className="mt-1 text-sm text-gray-500">{item.description}</p>
