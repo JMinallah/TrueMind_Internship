@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import welcomeImg from '../assets/Welcome.png';
+import bannerImg from '../assets/Property 1=Default.png';
 import SearchBar from '../components/SearchBar';
 import { popularCategories, chefsSpecials } from '../data/foodItems';
 
@@ -166,8 +167,7 @@ const Home = () => {
           </a>
         </div>
 
-        {/* Placeholder image — swap src later */}
-        {/* <img src="/images/banner.jpg" alt="Banner" className="absolute inset-0 w-full h-full object-cover" /> */}
+        <img src={bannerImg} alt="Banner" className="absolute inset-0 w-full h-full object-cover" />
       </section>
     </>
   );
