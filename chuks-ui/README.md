@@ -1,55 +1,29 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Project Setup (This Project)
 
-Currently, two official plugins are available:
+- **Install dependencies:** Run `npm install` in the project root.
+- **Start development server:** Run `npm run dev` and open http://localhost:5173 (Vite default).
+- **Build for production:** Run `npm run build` then `npm run preview` to locally preview the build.
+- **Node version:** Use Node.js 14+ (16+ recommended).
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Quick project overview:**
+	- `src/` — application source
+	- `src/components/` — reusable UI components (Navbar, Footer, SearchBar)
+	- `src/pages/` — page views (Home, FoodDetail, Cart, SignIn, SignUp, Welcome)
+	- `src/layouts/` — layout components (`AuthLayout`, `MainLayout`)
+	- `src/data/` — static data (e.g., `foodItems.js`)
+	- `public/` — static assets served as-is
 
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-
-## Dependencies & Setup
-
-To set up and run this project, you need the following dependencies:
-
-### Main dependencies
-- react
-- react-dom
-- react-router-dom
-- react-icons
-- tailwindcss
-- @tailwindcss/vite
-- vite
-
-### Dev dependencies
-- @vitejs/plugin-react
-- eslint
-- @eslint/js
-- eslint-plugin-react-hooks
-- eslint-plugin-react-refresh
-- globals
-- @types/react (for TypeScript support)
-- @types/react-dom (for TypeScript support)
-
-### Install all dependencies
-
-Run the following command in your project directory:
+- **Common commands:**
 
 ```
 npm install
+npm run dev
+npm run build
+npm run preview
 ```
 
-This will install all required packages as listed in `package.json`.
+- **Notes:** This project uses Vite with React; additional tooling (ESLint, Tailwind, react-router) may be configured in `package.json` and project files.
 
-### Scripts
-- `npm run dev` — Start development server
-- `npm run build` — Build for production
-- `npm run preview` — Preview production build
-- `npm run lint` — Run ESLint
+- **Live demo:** https://true-mind-internship.vercel.app/
+
