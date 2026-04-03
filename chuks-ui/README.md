@@ -25,5 +25,18 @@ npm run preview
 
 - **Notes:** This project uses Vite with React; additional tooling (ESLint, Tailwind, react-router) may be configured in `package.json` and project files.
 
+
+
+
+- **impplemented pages**
+```
+welcome page
+signin page
+create new account/ signuppage
+homepage
+fooddetail page
+cart page
+```
+
 - **Live demo:** https://true-mind-internship.vercel.app/
 
